@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="CodingArchitect.Spikes.NH" namespace="CodingArchitect.Spikes.NH.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="TextStorage">
+    <id name="TextNumber" access="property" unsaved-value="-1"  type="Int32" />
+    <property name="TextData" />
+  </class>
+</hibernate-mapping>

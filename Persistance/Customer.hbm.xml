@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="CodingArchitect.Spikes.NH" namespace="CodingArchitect.Spikes.NH.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Customer">
+    <id name="CustomerNumber" access="property" type="Int32">
+      <generator class="identity" />
+    </id>
+    <property name="FirstName" />
+    <property name="LastName" />
+    <many-to-one name="Comment" class="CodingArchitect.Spikes.NH.Domain.TextStorage, CodingArchitect.Spikes.NH" access="property" not-found="ignore" cascade="all-delete-orphan" />
+    <!--<many-to-one name="Comment" class="CodingArchitect.Spikes.NH.Domain.TextStorage, CodingArchitect.Spikes.NH" access="property" not-found="ignore" cascade="merge" />-->
+  </class>
+</hibernate-mapping>
